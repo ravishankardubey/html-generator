@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 style="text-align: center;"> LOVs Check </h1>
+  <h3>Input : LOVs List (pass an array)</h3>
+  <textarea class="input-textarea" id="xmlInput" rows="10" [(ngModel)]="lovsList"></textarea>
+  <h3>Input : Migrated LOVs List (pass an array)</h3>
+  <textarea class="input-textarea" id="xmlInput" rows="10" [(ngModel)]="migratedLovsList"></textarea>
+  <button (click)="validateLovs()">Validate</button>
+
+  <h3>Response</h3>
+  <div style="background: #f6f6f6; width:100%; float:left; height:200px; overflow-y:auto;" id="responseDiv"></div>
+  <h3 *ngIf="isValid" style="color: green;">Entered LOVS Are Valid</h3>
+  <h3 *ngIf="!isValid" style="color: red;">Entered LOVS Are Invalid</h3>
+  <textarea class="input-textarea" id="xmlInput" rows="10" [(ngModel)]="invalidLovs"></textarea>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 style="text-align: center;"> JSON / HTML Generator</h1>
+  <h3>Input : XML</h3>
+  <textarea class="input-textarea" id="xmlInput" rows="10"  [(ngModel)]="xmlInputValue"></textarea>
+  <button (click)="getHTMLFromXML()">Generate</button>
+
+  <h3 class="margin-top">Output : HTML</h3>
+  <textarea class="input-textarea" rows="10"  [(ngModel)]="htmlOutputValue" #htmlOutput></textarea>
+  <button [ngxClipboard]="htmlOutput" class="margin-bottom">Copy</button>
+
+  <h3 class="margin-top">Output : JSON</h3>
+  <div class="output" id="jsonOutput">
+    <pre>{{jsonOutputValue | json}}</pre>
+  </div>
+  <button class="margin-bottom">Do Something</button>
+
+  <h3 class="margin-top">Output : REACTIVE FORM</h3>
+  <textarea class="input-textarea" rows="10"  [(ngModel)]="reavtiveFormValue" #reavtiveForm></textarea>
+  <button [ngxClipboard]="reavtiveForm" class="margin-bottom">Copy</button>
+  
+</div>
